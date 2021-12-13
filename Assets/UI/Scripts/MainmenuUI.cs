@@ -1,12 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MainmenuUI : MonoBehaviour
 {
     public void OnClickOnlineButton()
     {
         Debug.Log("Click Online");
+    }
+
+    public void OnClickTutorialButton()
+    {
+        Application.OpenURL("https://github.com/GiveMeMandu/OOPArtsTown/wiki/Tutorial");
     }
 
     public void OnClickQuitButton()
