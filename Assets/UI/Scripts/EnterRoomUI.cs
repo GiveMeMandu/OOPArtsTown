@@ -6,13 +6,14 @@ using TMPro;
 public class EnterRoomUI : MonoBehaviour
 {
     [SerializeField]
-    public TMP_InputField ipInputField;
+    private TMP_InputField ipInputField;
 
     public void EnterRoom()
     {
         if(ipInputField.text != "")
         {
             var manager = OOPArtsTownNetworkManager.singleton;
+            manager.networkAddress = ipInputField.text;
             manager.StartClient();
         }
         else
