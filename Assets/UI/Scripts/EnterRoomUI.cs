@@ -7,21 +7,17 @@ public class EnterRoomUI : MonoBehaviour
 {
     [SerializeField]
     public TMP_InputField ipInputField;
-    [SerializeField]
-    public TMP_InputField portInputField;
 
     public void EnterRoom()
     {
-        if(ipInputField.text != "" || portInputField.text != "")
+        if(ipInputField.text != "")
         {
             var manager = OOPArtsTownNetworkManager.singleton;
             manager.StartClient();
         }
         else
         {
-            var manager = OOPArtsTownNetworkManager.singleton;
-            manager.StartClient();
-            //nicknameInputField.GetComponent<Animator>().SetTrigger("on");
+            ipInputField.GetComponent<Animator>().SetTrigger("on");
         }
     }
 }

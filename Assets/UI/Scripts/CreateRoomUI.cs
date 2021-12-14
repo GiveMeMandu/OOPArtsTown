@@ -2,27 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 using Mirror;
 
 public class CreateRoomUI : MonoBehaviour
 {
     [SerializeField]
-    private List<Button> maxPlayerCountButtons;
+    public TMP_InputField ipInputField;
+    [SerializeField]
+    private TMP_InputField maxPlayerInputField;
 
     private CreateGameRoomData roomData;
 
-    public void UpdateMaxPlayerCount(int count)
-    {
-        roomData.maxPlayerCount = count;
-    }
-
     public void CreateRoom()
     {
-        var manager = OOPArtsTownNetworkManager.singleton;
-        // 방 설정 작업 처리
-        //
-        // 생성 및 참가
-        manager.StartHost();
+        if(ipInputField.text != "")
+        {
+            var manager = OOPArtsTownNetworkManager.singleton;
+            manager.StartHost();
+        }
+        else
+        {
+            ipInputField.GetComponent<Animator>().SetTrigger("on");
+        }
     }
 }
 
