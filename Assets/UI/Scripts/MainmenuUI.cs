@@ -5,11 +5,6 @@ using UnityEngine.UI;
 
 public class MainMenuUI : MonoBehaviour
 {
-    public void OnClickOnlineButton()
-    {
-        Debug.Log("Click Online");
-    }
-
     public void OnClickTutorialButton()
     {
         Application.OpenURL("https://github.com/GiveMeMandu/OOPArtsTown/wiki/Tutorial");
