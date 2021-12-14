@@ -13,3 +13,5 @@ Unity_Version : 2020.3.24f1
 [Mirror - Docs](https://mirror-networking.gitbook.io/docs/)
 
 [Mirror - API Reference](https://mirror-networking.com/docs/api/Mirror.html)
+
+[TMPro - API Reference](https://docs.unity3d.com/Packages/com.unity.textmeshpro@1.2/api/TMPro.TMP_Text.html)
