@@ -15,13 +15,15 @@ public class Player : NetworkBehaviour
     private void Start()
     {
         Debug.Log("Spawn Player");
+        /* Host Only UI 띄우기
         if(isServer)
         {
-            connectionInfo = GameObject.FindWithTag("UI").transform.GetChild(0).gameObject;
+            connectionInfo = GameObject.FindWithTag("").transform.GetChild(0).gameObject;
             Debug.Log(connectionInfo.name);
             connectionInfo.SetActive(true);
             Debug.Log("ConnectionInfo UI Activated");
         }
+        */
         if(hasAuthority)
         {
             Transform cameraTransform = Camera.main.gameObject.transform;
