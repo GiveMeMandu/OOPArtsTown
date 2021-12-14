@@ -1701,7 +1701,7 @@ GameObject:
   m_Component:
   - component: {fileID: 578139289}
   m_Layer: 5
-  m_Name: Private
+  m_Name: Client
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4284,7 +4284,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PRIVATE
+  m_text: Client
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fc279419482d3be47b9a72fcc9484def, type: 2}
   m_sharedMaterial: {fileID: -5064800064241682170, guid: fc279419482d3be47b9a72fcc9484def, type: 2}
@@ -4601,7 +4601,7 @@ GameObject:
   - component: {fileID: 1273592375}
   - component: {fileID: 1273592374}
   m_Layer: 5
-  m_Name: Button_Private
+  m_Name: Button_Client
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5330,7 +5330,7 @@ GameObject:
   - component: {fileID: 1382882932}
   - component: {fileID: 1382882931}
   m_Layer: 5
-  m_Name: Image_Private
+  m_Name: Image_Client
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6912,7 +6912,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 326}
-  m_SizeDelta: {x: 441, y: 116}
+  m_SizeDelta: {x: 480, y: 216}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1873772192
 MonoBehaviour:
@@ -6934,7 +6934,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: afb85df2bbcd30341afcf01d5ce2aa04, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b724dbd8cb3434347a22cdb584663c1b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
