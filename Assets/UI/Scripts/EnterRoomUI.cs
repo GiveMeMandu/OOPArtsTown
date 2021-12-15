@@ -12,7 +12,7 @@ public class EnterRoomUI : MonoBehaviour
     {
         if(ipInputField.text != "")
         {
-            var manager = OOPArtsTownNetworkManager.singleton;
+            var manager = OT_NetworkManager.singleton;
             manager.networkAddress = ipInputField.text;
             manager.StartClient();
         }

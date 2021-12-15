@@ -18,7 +18,7 @@ public class ConnectionInfo : MonoBehaviour
 
     private void Start()
     {
-        var manager = OOPArtsTownNetworkManager.singleton;
+        var manager = NetworkManager.singleton as OT_NetworkManager;
         ipText.text += manager.networkAddress;
         maxPlayers = manager.maxConnections;
         numPlayerText.text = manager.numPlayers + " / " + maxPlayers;
@@ -31,7 +31,8 @@ public class ConnectionInfo : MonoBehaviour
     
     public void UpdateNumPlayer()
     {
-        var manager = OOPArtsTownNetworkManager.singleton;
-        numPlayerText.text = manager.numPlayers + " / " + maxPlayers;
+        var manager = NetworkManager.singleton as OT_NetworkManager;
+        //var players = FindObjectsOfType<Player>();
+        numPlayerText.text = string.Format("{0}/{1}", /*players.Length*/manager.numPlayers, maxPlayers);
     }
 }

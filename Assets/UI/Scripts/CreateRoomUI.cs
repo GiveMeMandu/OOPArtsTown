@@ -17,7 +17,7 @@ public class CreateRoomUI : MonoBehaviour
         //ip주소값 공백 검사
         if(ipInputField.text != "")
         {
-            var manager = OOPArtsTownNetworkManager.singleton;
+            var manager = NetworkManager.singleton as OT_NetworkManager;
             manager.networkAddress = ipInputField.text;
             //maxPlayer 숫자 검사
             if(int.TryParse(maxPlayerInputField.text, out manager.maxConnections))
