@@ -6,7 +6,7 @@ public class InGameSettingsUI : SettingsUI
 {
     public void QuitGame()
     {
-        var manager = OOPArtsTownNetworkManager.singleton;
+        var manager = OT_NetworkManager.singleton;
         if(manager.mode == Mirror.NetworkManagerMode.Host)
         {
             manager.StopHost();
