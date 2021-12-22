@@ -18,7 +18,6 @@ public class OnlineUI : MonoBehaviour
         if(nicknameInputField.text != "")
         {
             PlayerSettings.nickname = nicknameInputField.text;
-            Debug.Log(nicknameInputField.text);
             createRoomUI.SetActive(true);
             gameObject.SetActive(false);
         }
@@ -33,7 +32,6 @@ public class OnlineUI : MonoBehaviour
         if(nicknameInputField.text != "")
         {
             PlayerSettings.nickname = nicknameInputField.text;
-            Debug.Log(nicknameInputField.text);
             enterRoomUI.SetActive(true);
             gameObject.SetActive(false);
         }

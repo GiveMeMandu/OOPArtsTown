@@ -8,31 +8,20 @@ using Mirror;
 public class CreateRoomUI : MonoBehaviour
 {
     [SerializeField]
-    private TMP_InputField ipInputField;
-    [SerializeField]
     private TMP_InputField maxPlayerInputField;
 
     public void CreateRoom()
     {
-        //ip주소값 공백 검사
-        if(ipInputField.text != "")
+        var manager = NetworkManager.singleton as OT_NetworkManager;
+        //maxPlayer 숫자 검사
+        if(int.TryParse(maxPlayerInputField.text, out manager.maxConnections))
         {
-            var manager = NetworkManager.singleton as OT_NetworkManager;
-            manager.networkAddress = ipInputField.text;
-            //maxPlayer 숫자 검사
-            if(int.TryParse(maxPlayerInputField.text, out manager.maxConnections))
-            {
-                manager.StartHost();
-            }
-            else
-            {
-                //숫자만을 입력하라는 경고 문구 UI 표기
-                ipInputField.GetComponent<Animator>().SetTrigger("on");
-            } 
+            manager.StartHost();
         }
         else
         {
-            ipInputField.GetComponent<Animator>().SetTrigger("on");
+            //숫자만을 입력하라는 경고 문구 UI 표기
+            //maxPlayerInputField.GetComponent<Animator>().SetTrigger("on");
         }
     }
 }
